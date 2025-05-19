@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Note extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+    protected $fillable = ['note','user_id'];
 
 }

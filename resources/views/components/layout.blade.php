@@ -9,6 +9,11 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>
+        @session('message')
+            <div style="background-color: #26823b; color: #e7dfdf; padding: 12px 20px; border-left: 6px solid #28a745; border-radius: 4px; font-size: 17px; margin-bottom: 15px;">
+                {{ session('message') }}
+            </div>
+        @endsession
         {{ $slot}}
     </body>
 </html>
