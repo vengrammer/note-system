@@ -1,10 +1,10 @@
-<x-layout>
-    <div class="note-container">
+<x-app-layout>
+    <div class="note-container py-12">
         <a href="{{route('note.create')}}" class="new-note-btn">
             New Note
         </a>
         <div class="notes">
-            @foreach($note as $note)
+            @foreach($notes as $note)
                 <div class="note">   
                     <div class="note-body">
                         {{Str::words($note->note, 30)}}
@@ -23,5 +23,7 @@
                 </div>
             @endforeach
         </div>
+
+        {{ $notes->links()}}
     </div>
-</x-layout>
+</x-app-layout>
